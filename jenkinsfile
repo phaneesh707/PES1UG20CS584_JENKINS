@@ -3,20 +3,23 @@ pipeline{
   stages {
     stage('Build'){
       steps{
-        sh ''
+        sh 'cd main  && g++ working.cpp'
         echo 'Build success'
       }
     
     }
     stage('Test'){
       steps{
+        sh 'cd main && ./a.out'
+        echo 'Test success'
       }
     }
-    stage('Deploy'){
-      steps{
-      }
+    //stage('Deploy'){
+      //steps{
+        
+      //}
     
-    }
+    //}
   }
   post{
     failure{
