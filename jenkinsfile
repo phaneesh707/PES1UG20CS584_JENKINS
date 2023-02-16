@@ -14,12 +14,6 @@ pipeline{
         echo 'Test success'
       }
     }
-    //stage('Deploy'){
-      //steps{
-        
-      //}
-    
-    //}
   }
   post{
     failure{
